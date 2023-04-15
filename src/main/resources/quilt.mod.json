@@ -1,19 +1,19 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "com.example",
-		"id": "example_mod",
+		"group": "online.maestoso",
+		"id": "dragon_deleter",
 		"version": "${version}",
 		"metadata": {
-			"name": "Mod Name",
-			"description": "A short description of your mod.",
+			"name": "DragonDeleter",
+			"description": "Removes the Ender Dragon from the game.",
 			"contributors": {
-				"Your name here": "Owner"
+				"Mae Rosaline": "Owner"
 			},
 			"contact": {
-				"homepage": "https://example.com/",
-				"issues": "https://github.com/QuiltMC/quilt-kotlin-template-mod/issues",
-				"sources": "https://github.com/QuiltMC/quilt-kotlin-template-mod"
+				"homepage": "https://maestoso.online/dragon-deleter",
+				"issues": "https://github.com/waterlilly-lilly/dragon-deleter/issues",
+				"sources": "https://github.com/waterlilly-lilly/dragon-deleter"
 			},
 			"icon": "assets/example_mod/icon.png"
 		},
@@ -21,7 +21,7 @@
 		"entrypoints": {
 			"init": {
 				"adapter": "kotlin",
-				"value": "com.example.example_mod.ExampleMod"
+				"value": "online.maestoso.dragondeleter.DragonDeleterInit"
 			}
 		},
 		"depends": [
@@ -43,5 +43,5 @@
 			}
 		]
 	},
-	"mixin": "example_mod.mixins.json"
+	"mixin": "dragon_deleter.mixins.json"
 }
