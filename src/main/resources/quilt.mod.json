@@ -21,7 +21,7 @@
 		"entrypoints": {
 			"init": {
 				"adapter": "kotlin",
-				"value": "online.maestoso.dragondeleter.DragonDeleterInit"
+				"value": "online.maestoso.dragondeleter.DragonDeleter"
 			}
 		},
 		"depends": [

@@ -5,7 +5,7 @@ import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.Monster;
 import net.minecraft.world.World;
-import online.maestoso.dragondeleter.DragonDeleterInit;
+import online.maestoso.dragondeleter.DragonDeleter;
 import org.quiltmc.qsl.entity.multipart.impl.EnderDragonMultipartEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -22,10 +22,13 @@ public abstract class DragonDeleterMixin extends MobEntity implements Monster, E
 	@Shadow
 	public abstract void kill();
 
-	@Inject(method = "tickWithEndCrystals", at = @At("TAIL"))
-	public void dragon_deleter$injectTickWithEndCrystals(CallbackInfo ci) {
-		DragonDeleterInit.LOGGER.info("Dragon successfully deleted!");
-		kill();
+	@Inject(method = "tickMovement", at = @At("TAIL"))
+	public void dragon_deleter$injectTickMovement(CallbackInfo ci) {
+		if(getWorld().getGameRules().getBoolean(DragonDeleter.DISABLE_DRAGON_SPAWNING)) {
+			DragonDeleter.LOGGER.info("Dragon successfully deleted!");
+			kill();
+		}
+
 	}
 
 }

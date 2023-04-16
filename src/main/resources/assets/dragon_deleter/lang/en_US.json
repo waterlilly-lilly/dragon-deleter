@@ -1,0 +1,5 @@
+{
+  "gamerule.disableDragonSpawning": "Disable Dragon Spawning",
+  "gamerule.disableDragonRespawning": "Disable Dragon Respawning",
+  "gamerule.disableDragonEggTeleportation": "Disable Dragon Egg Teleportation"
+}
