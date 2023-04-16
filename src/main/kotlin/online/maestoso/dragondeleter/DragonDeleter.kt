@@ -13,6 +13,7 @@ object DragonDeleter : ModInitializer {
     @JvmField val DISABLE_DRAGON_SPAWNING: GameRules.Key<GameRules.BooleanRule> = GameRuleRegistry.register("disableDragonSpawning", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(true))
     @JvmField val DISABLE_DRAGON_RESPAWNING: GameRules.Key<GameRules.BooleanRule> = GameRuleRegistry.register("disableDragonRespawning", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(true))
     @JvmField val DISABLE_DRAGON_EGG_TP: GameRules.Key<GameRules.BooleanRule> = GameRuleRegistry.register("disableDragonEggTeleportation", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(true))
+    @JvmField val RESPAWN_DRAGON_EGG: GameRules.Key<GameRules.BooleanRule> = GameRuleRegistry.register("respawnDragonEgg", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(true))
     override fun onInitialize(mod: ModContainer?) {
     }
 }

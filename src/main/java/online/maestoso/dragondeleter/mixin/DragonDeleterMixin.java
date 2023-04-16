@@ -22,13 +22,12 @@ public abstract class DragonDeleterMixin extends MobEntity implements Monster, E
 	@Shadow
 	public abstract void kill();
 
-	@Inject(method = "tickMovement", at = @At("TAIL"))
+	@Inject(method = "tickMovement", at = @At(value="INVOKE_ASSIGN", target="Lnet/minecraft/entity/boss/dragon/phase/Phase;getPathTarget()Lnet/minecraft/util/math/Vec3d;"))
 	public void dragon_deleter$injectTickMovement(CallbackInfo ci) {
 		if(getWorld().getGameRules().getBoolean(DragonDeleter.DISABLE_DRAGON_SPAWNING)) {
 			DragonDeleter.LOGGER.info("Dragon successfully deleted!");
 			kill();
 		}
-
 	}
 
 }
