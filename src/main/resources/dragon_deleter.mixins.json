@@ -3,7 +3,10 @@
   "minVersion": "0.8",
   "package": "online.maestoso.dragondeleter.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [],
+  "mixins": [
+    "DragonDeleterMixin",
+    "DragonRespawnDisablerMixin"
+  ],
   "client": [],
   "injectors": {
     "defaultRequire": 1
