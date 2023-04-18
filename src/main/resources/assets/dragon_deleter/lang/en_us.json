@@ -1,5 +1,6 @@
 {
-  "gamerule.disableDragonSpawning": "Disable Dragon Spawning",
-  "gamerule.disableDragonRespawning": "Disable Dragon Respawning",
-  "gamerule.disableDragonEggTeleportation": "Disable Dragon Egg Teleportation"
+  "gamerule.disableDragonSpawning": "Disable Ender Dragon spawning",
+  "gamerule.disableDragonRespawning": "Disable Ender Dragon respawning",
+  "gamerule.disableDragonEggTeleportation": "Disable Dragon Egg teleportation",
+  "gamerule.respawnDragonEgg": "Respawn dragon egg"
 }
